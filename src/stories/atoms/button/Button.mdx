@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Primary, Secondary, Large, Small } from './Button.stories.js';
+
+<Meta title="Button" component={Primary.args} />
+
+
+## Button
+
+### Primary
+
+Este es un ejemplo de cómo usar el botón `Primary`.
+
+<Primary primary={true} label='Button' />
+
+```jsx 
+import { Button } from './Button';
+
+<Button size="medium" label="Button" primary={true} onClick={onClick}/>
+```
+
+### Secondary
+
+Este es un ejemplo de cómo usar el botón `Secondary`.
+
+<Secondary primary={false} label='Button'/>
+
+```jsx
+import { Button } from './Button';
+
+<Button size="medium" label="Button" primary={false} onClick={onClick}/>
+```
+
+### Large
+
+Este es un ejemplo de cómo usar el botón `Large`.
+
+<Large primary={false} label='Button' size="large"/>
+
+```jsx
+import { Button } from './Button';
+
+<Button size="large" label="Button" primary={false} onClick={onClick}/>
+```
+
+### Small
+
+Este es un ejemplo de cómo usar el botón `Small`.
+
+<Small primary={false} label='Button' size="small"/>
+
+```jsx
+import { Button } from './Button';
+
+<Button size="small" label="Button" primary={false} onClick={onClick}/>
+```

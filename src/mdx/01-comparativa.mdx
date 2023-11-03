@@ -1,0 +1,72 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Comparativa Frameworks" />
+
+# **React Puro:**
+
+## Pros:
+
+1. Flexibilidad: te da la libertad de construir interfaces de usuario de forma creativa y reutilizable sin imponer una estructura rigida. Puedes organizar tu codigo como mejor parezca.
+
+2. Comunidad: cuenta con una comunidad activa y un ecosistema lleno de bibliotecas y herramientas bien probadas. Esto significa que siempre hay recursos disponibles y puedes encontrar soluciones para practicamente cualquier problema.
+
+3. Virtual DOM: la forma en que React maneja el Virtual DOM hace que las actualizaciones de la interfaz de usuario sean eficientes. Esto se traduce en una experiencia de usuario mas fluida y rapida.
+
+## Contras:
+
+1. Configuración inicial: si bien React en si mismo es bastante sencillo de entender, empezar un proyecto desde cero puede llevar algo de tiempo y esfuerzo para su configuracion.
+
+2. Server-side Rendering y Rutas Dinámicas: implementar Server-side Rendering (SSR) o rutas dinamicas en React puro puede requerir un poco de trabajo extra y posiblemente el uso de herramientas adicionales.
+
+
+
+# **Next.js:**
+
+## Pros:
+
+1. Server-side Rendering (SSR) y Static Site Generation (SSG): facilita la implementacion de SSR y SSG, lo que puede mejorar la carga inicial de la pagina y el SEO. Esto es especialmente util para aplicaciones que requieren contenido dinamico en el servidor.
+
+2. Routing Integrado: proporciona un sistema de enrutamiento incorporado que hace que la navegacion entre paginas sea massencilla y eficiente.
+
+3. Optimizaciones de Rendimiento Automaticas: incluye optimizaciones automaticas como la división de codigo y precarga de rutas, lo que puede mejorar la velocidad de carga de la aplicacion.
+
+## Contras:
+
+1. Menor Flexibilidad: tiene una estructura de proyecto mas definida, lo que puede no ser ideal para proyectos muy personalizados o no convencionales.
+
+2. Mayor Curva de Aprendizaje: para los nuevos desarrolladores puede tener una curva de aprendizaje mas pronunciada debido a sus caracteristicas adicionales como Server-side Rendering (SSR) y el Static Site Generation (SSG).
+
+
+# **Gatsby:**
+
+## Pros:
+
+1. Alto rendimiento: esta diseñado para ofrecer un rendimiento muy bueno. Utiliza la tecnica de generacion de sitios estaticos (SSG) para cargar paginas instantaneamente.
+
+2. SEO optimizado: al generar paginas estaticas, Gatsby mejora el SEO al proporcionar contenido al motor de busqueda mas rapidamente y permitir una indexacion mas efectiva.
+
+3. Seguridad: al ser estatico, Gatsby es menos susceptible a ciertos tipos de ataques, como inyecciones de código malicioso.
+
+4. Gran comunidad: tiene una comunidad activa y un ecosistema en crecimiento, lo que significa que hay una amplia gama de complementos y recursos disponibles.
+
+5. Facil integracion con CMSs: se integra bien con varios sistemas de gestion de contenido (como WordPress, Drupal y Contentful) a traves de plugins, lo que facilita la creacion de sitios dinamicos.
+
+6. Desarrollo rapido: El enfoque de desarrollo basado en componentes de React y el uso de GraphQL para consultar datos hacen que el desarrollo sea rapido y eficiente.
+
+7. Buen soporte para Progressive Web Apps (PWAs): facilita la creacion de aplicaciones web progresivas que ofrecen una mejor experiencia de usuario.
+
+8. Automatizacion de tareas: incluye un sistema de construccion y herramientas de automatizacion que facilitan el proceso de desarrollo y despliegue.
+
+## Contras:
+
+1. Complejidad inicial: si se es nuevo en React o GraphQL, la curva de aprendizaje puede ser un poco empinada al principio.
+
+2. No es ideal para aplicaciones dinamicas: está diseñado principalmente para sitios web estaticos. Si se necesita una aplicacion web altamente dinamica, posiblemente que no sea la mejor opcion.
+
+3. Tamaño del bundle: aunque intenta optimizar el rendimiento, el tamaño del bundle puede aumentar si no se gestionan bien los recursos y las dependencias.
+
+4. No es la mejor opcion para sitios con contenido cambiante en tiempo real: dado que genera paginas estaticas, no es la mejor eleccion si necesitas contenido que cambie en tiempo real sin una recarga de pagina.
+
+5. Requiere proceso de construccion antes del despliegue: debido a su naturaleza estatica, Gatsby necesita ser construido antes de ser desplegado. Esto puede aumentar el tiempo de despliegue en comparacion con plataformas completamente dinamicas.
+
+6. Limitaciones de base de datos: Gatsby no es la mejor opcion si se necesita una base de datos altamente relacional o si se tiene una gran cantidad de datos que cambian constantemente.
