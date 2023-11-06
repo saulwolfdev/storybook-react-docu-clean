@@ -1,4 +1,6 @@
-# Declaracion de Variables en React y JavaScript Moderno (Let y Const)
+import CodeBlock from '../CodeBlock.js';
+
+# Variables en React y JavaScript Moderno (Let y Const)
 
 Antes que nada cabe mencionar que las variables se declaraban anteriormente con **var** la razón por la que ya no se recomienda usar la palabra clave **var** en React (y en JavaScript en general) se debe a la introducción de **let y const** en ECMAScript 6 (ES6)
 
@@ -10,22 +12,26 @@ let es una palabra clave introducida en ECMAScript 6 (también conocido como ES6
 
 Sintaxis:
 
-```javascript
-let variable = valor;
-```
+<CodeBlock
+  codeString={`let variable = valor;`} 
+  language='javascript'
+/>
 
 Ejemplo:
 
-```javascript
-let x = 10;
+<CodeBlock
+  codeString={`
+  let x = 10;
 
-if (true) {
-  let x = 20;
-  console.log(x); // 20
-}
+  if (true) {
+    let x = 20;
+    console.log(x); // 20
+  }
 
-console.log(x); // 10
-```
+  console.log(x); // 10
+  `}
+  language='javascript'
+/>
 
 En este ejemplo, la variable x declarada dentro del bloque if tiene un alcance limitado a ese bloque, mientras que la variable x declarada fuera del bloque if tiene un alcance global al script.
 
@@ -34,10 +40,27 @@ const es otra palabra clave introducida en ECMAScript 6. Al igual que let, permi
 
 Sintaxis:
 
-```javascript
-const variable = valor;
-```
+<CodeBlock
+  codeString={`const variable = valor;`}
+  language='javascript'
+/>
+
 Ejemplo:
+
+<CodeBlock
+  codeString={`
+  const PI = 3.14;
+  PI = 42; // Error: No puedes reasignar una constante
+
+  const array = [1, 2, 3];
+  array.push(4); // Esto es válido, porque no estamos reasignando 'array', es valido pero no es lo ideal ya que estariamos mutando el array
+
+  const newArray = [...array, 4]; //lo ideal seria utilizar el spread operator para evitar mutar el arreglo original.
+
+  console.log(newArray); // Output: [1, 2, 3, 4] 
+  `}
+  language='javascript'
+/>
 
 ```javascript
 const PI = 3.14;
