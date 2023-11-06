@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { Primary, Secondary, Large, Small } from './Button.stories.js';
+import CodeBlock from '../../../CodeBlock.js';
 
 <Meta title="Button" component={Primary.args} />
 
@@ -12,11 +13,14 @@ Este es un ejemplo de cómo usar el botón `Primary`.
 
 <Primary primary={true} label='Button' />
 
-```jsx 
-import { Button } from './Button';
+<CodeBlock
+  codeString={`
+  import { Button } from './Button';
 
-<Button size="medium" label="Button" primary={true} onClick={onClick}/>
-```
+  <Button size="medium" label="Button" primary={true} onClick={onClick}/>
+  `} 
+  language='javascript'
+/>
 
 ### Secondary
 
@@ -24,11 +28,14 @@ Este es un ejemplo de cómo usar el botón `Secondary`.
 
 <Secondary primary={false} label='Button'/>
 
-```jsx
-import { Button } from './Button';
+<CodeBlock
+  codeString={`
+  import { Button } from './Button';
 
-<Button size="medium" label="Button" primary={false} onClick={onClick}/>
-```
+  <Button size="medium" label="Button" primary={false} onClick={onClick}/>
+  `} 
+  language='javascript'
+/>
 
 ### Large
 
@@ -36,11 +43,14 @@ Este es un ejemplo de cómo usar el botón `Large`.
 
 <Large primary={false} label='Button' size="large"/>
 
-```jsx
-import { Button } from './Button';
+<CodeBlock
+  codeString={`
+  import { Button } from './Button';
 
-<Button size="large" label="Button" primary={false} onClick={onClick}/>
-```
+  <Button size="large" label="Button" primary={false} onClick={onClick}/>
+  `} 
+  language='javascript'
+/>
 
 ### Small
 
@@ -48,8 +58,11 @@ Este es un ejemplo de cómo usar el botón `Small`.
 
 <Small primary={false} label='Button' size="small"/>
 
-```jsx
-import { Button } from './Button';
+<CodeBlock
+  codeString={`
+  import { Button } from './Button';
 
-<Button size="small" label="Button" primary={false} onClick={onClick}/>
-```
+  <Button size="small" label="Button" primary={false} onClick={onClick}/>
+  `} 
+  language='javascript'
+/>
