@@ -41,28 +41,28 @@ En una arrow function, this se hereda del contexto en el que se definió la func
 
 <CodeBlock
   codeString={`
-  let objeto = {
+  let objet = {
     nombre: "John",
     saludar: function() {
         setTimeout(function() {
-            console.log("Hola, soy " + this.nombre); // En este contexto, 'this' se refiere a 'objeto'
+            console.log("Hola, soy " + this.nombre); // En este contexto, 'this' se refiere a 'objet'
         }, 1000);
     }
    };
 
-  objeto.saludar(); // Imprimirá "Hola, soy undefined" porque 'this' no se refiere a 'objeto'
+  objet.saludar(); // Imprimirá "Hola, soy undefined" porque 'this' no se refiere a 'objet'
 
   // Solución con arrow function
-  let objetoArrow = {
+  let objetArrow = {
     nombre: "John",
     saludar: function() {
         setTimeout(() => {
-            console.log("Hola, soy " + this.nombre); // 'this' se refiere a 'objetoArrow'
+            console.log("Hola, soy " + this.nombre); // 'this' se refiere a 'objetArrow'
         }, 1000);
     }
   };
 
-  objetoArrow.saludar(); // Imprimirá "Hola, soy John" correctamente
+  objetArrow.saludar(); // Imprimirá "Hola, soy John" correctamente
   `} 
   language='javascript'
 />
