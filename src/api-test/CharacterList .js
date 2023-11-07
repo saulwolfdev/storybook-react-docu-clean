@@ -28,15 +28,16 @@ const CharacterList = ({ selectedOption: externalSelectedOption, onSelectChange 
 
   return (
     <div>
-      <select
-        className="character-select"
-        value={selectedOption}
-        onChange={(e) => {
-          const newValue = e.target.value;
-          setSelectedOption(newValue);
-          onSelectChange(newValue);
-        }}
-      >
+        <select
+            aria-label="Select Character"
+            className="character-select"
+            value={selectedOption}
+            onChange={(e) => {
+              const newValue = e.target.value;
+              setSelectedOption(newValue);
+              onSelectChange(newValue);
+            }}
+        >
         <option value="name">Nombre</option>
         <option value="image">Imagen</option>
       </select>
