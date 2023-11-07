@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './CharacterList.css';
 
-const CharacterList = ({ selectedOption: externalSelectedOption }) => {
+const CharacterList = ({ selectedOption: externalSelectedOption, onSelectChange }) => {
   const [characters, setCharacters] = useState([]);
   const [selectedOption, setSelectedOption] = useState(externalSelectedOption );
 
@@ -28,7 +28,15 @@ const CharacterList = ({ selectedOption: externalSelectedOption }) => {
 
   return (
     <div>
-      <select className="character-select" onChange={(e) => setSelectedOption(e.target.value)}>
+      <select
+        className="character-select"
+        value={selectedOption}
+        onChange={(e) => {
+          const newValue = e.target.value;
+          setSelectedOption(newValue);
+          onSelectChange(newValue);
+        }}
+      >
         <option value="name">Nombre</option>
         <option value="image">Imagen</option>
       </select>
@@ -45,12 +53,12 @@ const CharacterList = ({ selectedOption: externalSelectedOption }) => {
 
 CharacterList.propTypes = {
   selectedOption: PropTypes.oneOf(['name', 'image']),
+  onSelectChange: PropTypes.func,
 };
 
 CharacterList.defaultProps = {
   selectedOption: 'name',
+  onSelectChange: () => {},
 };
-
-
 
 export default CharacterList;
