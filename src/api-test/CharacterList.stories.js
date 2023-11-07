@@ -4,6 +4,17 @@ import CharacterList from './CharacterList ';
 export default {
   title: 'CharacterList',
   component: CharacterList,
+  argTypes: {
+    selectedOption: {
+      options: ['name', 'image'],
+      control: { type: 'select' },
+    },
+  },
 };
 
-export const Default = () => <CharacterList />;
+const Template = (args) => <CharacterList {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  selectedOption: 'name',
+};

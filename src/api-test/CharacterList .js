@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './CharacterList.css';
 
-const CharacterList = () => {
+const CharacterList = ({ selectedOption: externalSelectedOption }) => {
   const [characters, setCharacters] = useState([]);
-  const [selectedOption, setSelectedOption] = useState('name');
+  const [selectedOption, setSelectedOption] = useState(externalSelectedOption );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +19,12 @@ const CharacterList = () => {
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (externalSelectedOption) {
+      setSelectedOption(externalSelectedOption);
+    }
+  }, [externalSelectedOption]);
 
   return (
     <div>
@@ -35,5 +42,15 @@ const CharacterList = () => {
     </div>
   );
 };
+
+CharacterList.propTypes = {
+  selectedOption: PropTypes.oneOf(['name', 'image']),
+};
+
+CharacterList.defaultProps = {
+  selectedOption: 'name',
+};
+
+
 
 export default CharacterList;
